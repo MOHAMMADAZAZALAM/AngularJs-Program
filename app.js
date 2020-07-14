@@ -1,20 +1,20 @@
-var student={
-	name:""
-	type:"student"
+var student= {
+	name: "",
+	type: "student"
 }
-document.addEventListener('DomContentLoaded',ContentLoaded);
-function CountentLoaded(event){
-	document.getElementById('name').addEventListener("keyup",keyup);
+document.addEventListener('DOMContentLoaded',ContentLoaded);
+function ContentLoaded(event){
+	document.getElementById('name').addEventListener("keyup",keyUp);
 }
-function keyup(event){
+function keyUp(event){
 	CalculateNumricOutput();
 }
 function CalculateNumricOutput(){
 	student.name=document.getElementById('name').value;
 	var totalNameValue=0;
-	for(var i=0;i<student.name.length;i++)
+	for(var i=0; i<student.name.length; i++)
 	{
-	totalNameValue+=student.name.charAt(i);
+	totalNameValue += student.name.charCodeAt(i);
 	}
 var output="Total Numirical Value of persaon name is"+totalNameValue;
 document.getElementById('output').innerText=output;
